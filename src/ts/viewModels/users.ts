@@ -1,5 +1,5 @@
 import * as AccUtils from "../accUtils";
-class CustomersViewModel {
+class UsersViewModel {
 
   constructor() {
 
@@ -14,8 +14,8 @@ class CustomersViewModel {
    * after being disconnected.
    */
   connected(): void {
-    AccUtils.announce("Customers page loaded.");
-    document.title = "Customers";
+    AccUtils.announce("Users page loaded.");
+    document.title = "Users";
     // implement further logic if needed
   }
 
@@ -35,4 +35,4 @@ class CustomersViewModel {
   }
 }
 
-export = CustomersViewModel;
+export = UsersViewModel;
