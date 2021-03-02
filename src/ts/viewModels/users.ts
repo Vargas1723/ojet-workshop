@@ -1,4 +1,7 @@
+import * as ko from "knockout";
 import * as AccUtils from "../accUtils";
+import "ojs/ojknockout";
+
 class UsersViewModel {
 
   constructor() {
