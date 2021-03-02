@@ -1,0 +1,16 @@
+{
+  "name": "ojet-workshop-app",
+  "version": "1.0.0",
+  "description": "An Oracle JavaScript Extension Toolkit(JET) web app",
+  "dependencies": {
+    "@oracle/oraclejet": "~10.0.0"
+  },
+  "devDependencies": {
+    "@oracle/oraclejet-tooling": "~10.0.0",
+    "typescript": "4.0.2"
+  },
+  "engines": {
+    "node": ">=10.13.0"
+  },
+  "private": true
+}
