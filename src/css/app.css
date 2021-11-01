@@ -5,7 +5,20 @@
     Description:
         This is where any of your application specific styles should be included
 */
-
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.4em;
+  background: #f5f5f5;
+  color: #111111;
+  min-width: 230px;
+  max-width: 550px;
+  margin: 0 auto;
+}
+h1 {
+  font-weight: normal;
+  text-align: center;
+  font-size: 80px;
+}
 .sendOffScreen {
   position: absolute;
   left: -10000px;

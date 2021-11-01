@@ -62,8 +62,7 @@ class RootViewModel {
 
     const navData = [
       { path: "", redirect: "dashboard" },
-      { path: "dashboard", detail: { label: "Dashboard", iconClass: "oj-ux-ico-bar-chart" } },
-      { path: "users", detail: { label: "Users", iconClass: "oj-ux-ico-contact-group" } }
+      { path: "dashboard", detail: { label: "Dashboard", iconClass: "oj-ux-ico-bar-chart" } }
     ];
     // router setup
     const router = new CoreRouter(navData, {
@@ -102,7 +101,7 @@ class RootViewModel {
     // header
 
     // application Name used in Branding Area
-    this.appName = ko.observable("App Name");
+    this.appName = ko.observable("todos");
     // user Info used in Global Navigation area
 
     this.userLogin = ko.observable("john.hancock@oracle.com");

@@ -4,9 +4,43 @@
  as shown at https://oss.oracle.com/licenses/upl/
  -->
 <div class="oj-hybrid-padding">
-  <h1>Users</h1>
+  <h1>Todo</h1>
   <hr>
   <div id="users-layout" class="oj-flex">
-    
+    <div class="oj-flex-item oj-sn-6">
+      <h4 class="oj-flex-item oj-typography-heading-sn">
+        <oj-bind-text value='[[userFormTitle]]'></oj-bind-text>
+      </h4>
+
+      <oj-form-layout direction="row" max-columns="1" id="form-container">
+        <oj-input-text id="newName" value="{{newName}}" label-hint="Name"></oj-input-text>
+        <oj-input-text id="newTitle" value="{{newStatus}}" label-hint="Status" disabled="true"></oj-input-text>
+      </oj-form-layout>
+      <oj-button id="changeStatus" chroming="solid" on-oj-action="[[changeStatus]]">Change status</oj-button>
+      <oj-button id="saveUser" chroming="callToAction" on-oj-action="[[saveUser]]">Save</oj-button>
+      <oj-button id="deleteUser" chroming="callToAction" on-oj-action="[[deleteUser]]">Delete</oj-button>
+    </div>
+    <div class="oj-flex-item oj-sn-6">
+        <h4 class="oj-flex-item oj-typography-heading-sn">
+          <oj-bind-text value='[[userListTitle]]'></oj-bind-text>
+        </h4>
+      
+        <oj-list-view id="listview" aria-label="simple list" data="[[dataProvider]]" class="oj-listview-item-padding-off" selection-mode="[[selectionMode]]" on-selected-changed="[[handleSelectionChange]]">
+          <template slot="itemTemplate" data-oj-as="item">    
+              <oj-list-item-layout>
+                  <span class="oj-typography-body-md oj-text-color-primary"><oj-bind-text value="[[item.data.name]]"></oj-bind-text></span>
+                  <div>
+                    <span class="oj-typography-body-sm oj-text-color-secondary"><oj-bind-text value="[[item.data.done]]"></oj-bind-text></span>
+                  </div>
+                  
+                  
+              </oj-list-item-layout>
+          </template>
+      </oj-list-view>
+    </div>
+
+   
+
+
   </div>
 </div>
